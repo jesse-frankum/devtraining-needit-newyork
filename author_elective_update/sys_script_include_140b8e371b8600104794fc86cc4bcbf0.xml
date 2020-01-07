@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_58872_needit.ToObjectFromXml</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Include Script to create a JavaScript object from an XML document.</description>
+        <name>ToObjectFromXml</name>
+        <script><![CDATA[var ToObjectFromXml = Class.create();
+ToObjectFromXml.prototype = {
+    initialize: function() {
+	var xmlString ="<company>"+"<employee>"+"<id>10</id>"
+	+"<firstname>Tom</firstname>"+"<lastname>Cruise</lastname>"
+	+"<test>test1</test>"+"<test>test3</test>"+"</employee>"
+	+"<employee>"+"<id>20</id>"+"<firstname>Paul</firstname>"
+	+"<lastname>Enderson</lastname>"+"<test>test6</test>"
+	+"<test>test5</test>"+"</employee>"+"<employee>"+"<id>30</id>"
+	+"<firstname>Paul</firstname>"+"<lastname>Bush</lastname>"  
+	+"<test>test2</test>"+"<test>test4</test>"+"</employee>"+"</company>"; 
+ 
+	var helper =new XMLHelper(xmlString);
+	var obj = helper.toObject();
+	
+	logObj(obj,"*");
+	function logObj(obj, sep){
+		for(x in obj){
+		if(typeof obj[x]!="function"){
+			gs.log(sep + x +":: "+ obj[x]);}
+		logObj(obj[x], sep +"*");}}
+	},
+
+    type: 'ToObjectFromXml'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-06 22:52:52</sys_created_on>
+        <sys_id>140b8e371b8600104794fc86cc4bcbf0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ToObjectFromXml</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_include_140b8e371b8600104794fc86cc4bcbf0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-06 22:54:56</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>bcbf0b5fdb04409449eac59705961951</instance_id>
+        <instance_name>dev93986</instance_name>
+        <name>sys_script_include_140b8e371b8600104794fc86cc4bcbf0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_58872_needit.ToObjectFromXml&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description&gt;Include Script to create a JavaScript object from an XML document.&lt;/description&gt;&lt;name&gt;ToObjectFromXml&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var ToObjectFromXml = Class.create();
+ToObjectFromXml.prototype = {
+    initialize: function() {
+	var xmlString ="&lt;company&gt;"+"&lt;employee&gt;"+"&lt;id&gt;10&lt;/id&gt;"
+	+"&lt;firstname&gt;Tom&lt;/firstname&gt;"+"&lt;lastname&gt;Cruise&lt;/lastname&gt;"
+	+"&lt;test&gt;test1&lt;/test&gt;"+"&lt;test&gt;test3&lt;/test&gt;"+"&lt;/employee&gt;"
+	+"&lt;employee&gt;"+"&lt;id&gt;20&lt;/id&gt;"+"&lt;firstname&gt;Paul&lt;/firstname&gt;"
+	+"&lt;lastname&gt;Enderson&lt;/lastname&gt;"+"&lt;test&gt;test6&lt;/test&gt;"
+	+"&lt;test&gt;test5&lt;/test&gt;"+"&lt;/employee&gt;"+"&lt;employee&gt;"+"&lt;id&gt;30&lt;/id&gt;"
+	+"&lt;firstname&gt;Paul&lt;/firstname&gt;"+"&lt;lastname&gt;Bush&lt;/lastname&gt;"  
+	+"&lt;test&gt;test2&lt;/test&gt;"+"&lt;test&gt;test4&lt;/test&gt;"+"&lt;/employee&gt;"+"&lt;/company&gt;"; 
+ 
+	var helper =new XMLHelper(xmlString);
+	var obj = helper.toObject();
+	
+	logObj(obj,"*");
+	function logObj(obj, sep){
+		for(x in obj){
+		if(typeof obj[x]!="function"){
+			gs.log(sep + x +":: "+ obj[x]);}
+		logObj(obj[x], sep +"*");}}
+	},
+
+    type: 'ToObjectFromXml'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-01-06 22:52:52&lt;/sys_created_on&gt;&lt;sys_id&gt;140b8e371b8600104794fc86cc4bcbf0&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;ToObjectFromXml&lt;/sys_name&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_140b8e371b8600104794fc86cc4bcbf0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-01-06 22:54:56&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1999333556</payload_hash>
+        <record_name>ToObjectFromXml</record_name>
+        <reverted_from/>
+        <source>e47de0fb1b0200104794fc86cc4bcb63</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-06 22:54:56</sys_created_on>
+        <sys_id>a97cc2b71b8600104794fc86cc4bcb96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16f7d1180820000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-06 22:54:56</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>257cc2b7168600104fb25b0d8076e096</update_guid>
+        <update_guid_history>257cc2b7168600104fb25b0d8076e096:1999333556,0bfb0ef37f860010dbd6bb0128a8e92c:1683315215</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-07 12:30:30</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>58f53fe8652045e491ba63f34ae13690</sys_id>
+        <sys_metadata>140b8e371b8600104794fc86cc4bcbf0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ToObjectFromXml</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_script_include_140b8e371b8600104794fc86cc4bcbf0</sys_update_name>
+        <sys_update_version display_value="sys_script_include_140b8e371b8600104794fc86cc4bcbf0">a97cc2b71b8600104794fc86cc4bcb96</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-07 12:30:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
